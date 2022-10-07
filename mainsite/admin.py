@@ -3,4 +3,8 @@ from .models import Post
 
 # Register your models here.
 
-admin.site.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    list_display = ('title', 'slug', 'pub_date')  # 显示张贴的日期和时间
+
+
+admin.site.register(Post, PostAdmin)
