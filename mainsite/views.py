@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Post
 
-
 # Create your views here
 def homepage(request):   # homepage函数用于获取所有文章
     posts = Post.objects.all()        # 取得所有的数据项
